@@ -90,7 +90,7 @@ function loadGameData() {
 
 		tile.id = tilesJson[i]['id'];
 		tile.image = new Image();
-		tile.image.src = "game/images/tiles/" + tilesJson[i]['imgName'];
+		tile.image.src = "images/tiles/" + tilesJson[i]['imgName'];
 		tile.collision = tilesJson[i]['collision'];
 		tile.speedMultiplier = tilesJson[i]['speedMultiplier'];
 		//Add draw function to tiles

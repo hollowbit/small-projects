@@ -302,17 +302,17 @@ function GameState() {
 
 		//Load tank images
 		player1TankImage = new Image();
-		player1TankImage.src = "game/images/player1_tank.png";
+		player1TankImage.src = "images/player1_tank.png";
 
 		player2TankImage = new Image();
-		player2TankImage.src = "game/images/player2_tank.png";
+		player2TankImage.src = "images/player2_tank.png";
 
 		damagedTankImage = new Image();
-		damagedTankImage.src = "game/images/damaged_tank.png";
+		damagedTankImage.src = "images/damaged_tank.png";
 
 		//Load bullet image
 		bulletImage = new Image();
-		bulletImage.src = "game/images/bullet.png";
+		bulletImage.src = "images/bullet.png";
 
 		//Event handlers
 		this.handleKeyDown = function(evt) {
