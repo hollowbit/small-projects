@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Combat Hommage</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="game/tank.js"></script>
+		<script src="game/collisionRect.js"></script>
+		<script src="game/bullet.js"></script>
+		<script src="game/gameData.js"></script>
+		<script src="game/gameState.js"></script>
+		<script src="game/game.js"></script>
+	</head>
+	<body>
+		<article id="game">
+			<h1>COMBAT</h1>
+			<canvas id="gameCanvas" width="400" height="400"></canvas>
+			<p id="mapName">Map: </p>
+			
+			<div id="settings"><!--Settings Section-->
+				<h3>Settings</h3>
+				<input type="checkbox" id="stiffRotation" checked/> Stiff rotation?<br>
+				Map: <select id="mapSelect"></select><br>
+				<input type="button" id="resetGame" value="Reset Game"/><br><br>
+				<span style="color:red;">Changing settings will restart the game</span>
+			</div>
+			
+			<div><!--Controls Section-->
+				<h3>Controls</h3>
+				<table id="controlsTable">
+				<tr><th>Control</th><th>Player 1</th><th>Player 2</th></tr>
+				<tr><td>Move Forward</td><td>W</td><td>Arrow Up</td></tr>
+				<tr><td>Turn Left</td><td>A</td><td>Arrow Left</td></tr>
+				<tr><td>Turn Right</td><td>D</td><td>Arrow Right</td></tr>
+				<tr><td>Switch Tank</td><td>S</td><td>Arrow Down</td></tr>
+				<tr><td>Shoot</td><td>Spacebar</td><td>Enter</td></tr>
+				</table>
+				<p>Press SHIFT-R to restart</p>
+			</div>
+
+			<div><!--Info Section-->
+				<p>Combat originally appeared on the Atari 2600. This is a partial remake of that game. It is meant to be played by 2 players so grab a friend or family member and see who is better.</p>
+				<br>
+				<p>The goal of the game is to destroy all your opponents tanks. Each tank takes 3 hits to destroy. You can only control one tank at a time. Driving on roads makes you go faster and driving in bushes makes you go slower. Please read controls before playing. Maps are picked randomly at the beginning of each round. Enjoy!</p>
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+			<div><!--Technical Info Section-->
+			<h4>Technical Info</h4>
+			<p>Map Creation: It is possible to create, edit and remove maps and tiles by going in the `game/gameData.js` file. There you will find a blank, commented-out template map at the bottom that you can copy/paste into the map array in the json to add a new map. You can find tile IDs at the top of this file so you know what tiles you are placing.</p>
+
+			<p>You may also edit how many tanks spawn on each map type and you can even change tile attiributes or add your own tiles. I recommend using a 5x5 image so it matches the rest of the graphics. You can modify the `speedMultiplier` to make tanks travel faster or slower on those tiles. You can also modify whether it has collisions or not. Make sure the tile id is unique if you are adding new tiles.</p>
+
+			<p>The game is designed to be dynamic so make any changes you want in the gameData.js file and they should apply as long as the json is valid.</p>
+			</div>
+			
+			<br>
+			<br>
+
+			<footer>
+				<small>Made by Nathanael Maher. Oct. 2016</small>
+			</footer>
+		</article><!--Game Article End-->
+	</body>
+</html>
